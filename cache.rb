@@ -19,7 +19,7 @@ get '/' do
   headers \
     'Server' => 'Marsupial Cache',
     'X-Served-By' => Socket.gethostname,
-    'X-Cache' => $cache_hits > 1 ? 'HIT' : 'MISS'
+    'X-Cache' => $cache_hits > 1 ? 'HIT' : 'MISS',
     'X-Cache-Hits' => $cache_hits.to_s,
     'Connection' => 'close'
 
