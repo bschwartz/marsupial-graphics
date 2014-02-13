@@ -18,7 +18,8 @@ get '/' do
     'Server' => 'Marsupial Origin',
     'X-Served-By' => Socket.gethostname,
     'Cache-Control' => 'no-cache',
+    'Content-Type' => 'text/plain',
     'Connection' => 'close'
 
-  send_file marsupials.sample, last_modified: Time.now
+  body IO.read(marsupials.sample)
 end
