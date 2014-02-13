@@ -20,5 +20,5 @@ get '/' do
     'Cache-Control' => 'no-cache',
     'Connection' => 'close'
 
-  send_file marsupials.sample
+  send_file marsupials.sample, last_modified: Time.now
 end
