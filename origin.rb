@@ -17,6 +17,7 @@ get '/' do
   headers \
     'Server' => 'Marsupial Origin',
     'X-Served-By' => Socket.gethostname,
+    'Cache-Control' => 'no-cache',
     'Connection' => 'close'
 
   send_file marsupials.sample
