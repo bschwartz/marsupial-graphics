@@ -7,7 +7,7 @@ require 'socket'
 require 'net/http'
 
 set :bind, '0.0.0.0'
-#set :port, 80
+set :port, 80
 disable :protection
 
 $cache_hits = 0
